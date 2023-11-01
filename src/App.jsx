@@ -1,5 +1,5 @@
 import { Outlet } from 'react-router-dom'
-import NamedLink from './components/NamedLink'
+import NamedLink from '@/components/NamedLink'
 
 function App() {
   return (
@@ -18,6 +18,9 @@ function App() {
               </h2>
               <NamedLink name="home">
                 Home
+              </NamedLink>
+              <NamedLink name="vehicles.index">
+                Vehicles
               </NamedLink>
             </div>
             <div className="flex gap-4 items-center">
