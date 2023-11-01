@@ -1,12 +1,19 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import axios from 'axios'
 import App from '@/App'
 import Home from '@/views/Home'
 import Register from '@/views/auth/Register'
 import VehicleList from './views/vehicles/VehicleList'
 import '@/assets/main.css'
 import { route } from '@/routes'
+
+window.axios = axios
+
+window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest'
+window.axios.defaults.withCredentials = true
+window.axios.defaults.baseURL = 'http://127.0.0.1:8000/api/v1'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
