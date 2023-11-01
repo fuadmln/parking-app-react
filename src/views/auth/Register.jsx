@@ -1,15 +1,26 @@
 import { useState } from 'react'
+import { useAuth } from '@/hooks/useAuth'
 
 function Register() {
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [passwordConfirmation, setPasswordConfirmation] = useState()
+  const { register } = useAuth()
 
-  function handleSubmit(e){
+  async function handleSubmit(e){
     e.preventDefault()
-    const data = { name, email, password, passwordConfirmation }
-    console.log(data)
+    const body = { 
+      name, 
+      email, 
+      password, 
+      password_confirmation: passwordConfirmation,
+    }
+
+    await register(body)
+
+    setPassword('')
+    setPasswordConfirmation('')
   }
 
   return (
