@@ -43,7 +43,7 @@ export function useAuth(){
     return axios.post('/auth/login', data)
       .then(response => {
         setAccessToken(response.data.access_token)
-        navigate(route('vehicles.index')) //
+        navigate(route('parkings.active'))
       })
       .catch(error => {
         if (error.response.status === 422){

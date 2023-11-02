@@ -19,7 +19,10 @@ function App() {
   }
 
   function leftAuthLinks(){
-    return <NamedLink name="vehicles.index">Vehicles</NamedLink>
+    return <>
+      <NamedLink name="parkings.active">Parkings</NamedLink>
+      <NamedLink name="vehicles.index">Vehicles</NamedLink>
+    </>
   }
 
   function rightGuestLinks(){
@@ -31,7 +34,7 @@ function App() {
 
   function rightAuthLinks(){
     return <>
-      <button onClick={ logout } type="button" className="text-blie-600">
+      <button onClick={ logout } type="button" className="text-red-600">
         Logout
       </button>
     </>
