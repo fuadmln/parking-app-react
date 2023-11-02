@@ -34,6 +34,7 @@ function App() {
 
   function rightAuthLinks(){
     return <>
+      <NamedLink name="profile.edit">Profile</NamedLink>
       <button onClick={ logout } type="button" className="text-red-600">
         Logout
       </button>
