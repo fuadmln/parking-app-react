@@ -1,6 +1,7 @@
 const routeNames = {
   'home': '/',
-  'register': 'register',
+  'register': '/register',
+  'login': '/login',
   'vehicles.index': '/vehicles',
 }
 

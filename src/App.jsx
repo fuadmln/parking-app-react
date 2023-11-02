@@ -27,6 +27,9 @@ function App() {
               <NamedLink name="register">
                 Register
               </NamedLink>
+              <NamedLink name="login">
+                Login
+              </NamedLink>
             </div>
           </nav>
         </div>
