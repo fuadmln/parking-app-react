@@ -14,7 +14,7 @@ function ValidationError({ errors, field }){
 }
 
 ValidationError.propTypes = {
-  errors: PropTypes.string.isRequired,
+  errors: PropTypes.object.isRequired,
   field: PropTypes.string.isRequired,
 }
 
