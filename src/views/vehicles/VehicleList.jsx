@@ -31,9 +31,12 @@ function VehicleList(){
               </div>
 
               <div className="flex gap-1">
-                <button type="button" className="btn btn-secondary text-sm">
+                <Link
+                  to={ route('vehicles.edit', { id: vehicle.id }) }
+                  className="btn btn-secondary text-sm"
+                >
                   Edit
-                </button>
+                </Link>
                 <button type="button" className="btn text-white bg-red-600 hover:bg-red-500 text-sm">
                   X
                 </button>
