@@ -55,9 +55,22 @@ export function useVehicle(id = null){
       .finally(() => setLoading(false))
   }
 
+  async function destroyVehicle(vehicle){
+    setLoading(true)
+    setErrors({})
+
+    return axios.delete(`vehicles/${vehicle.id}`)
+      .then(() => { console.log('success delete message') })
+      .catch(error => {
+        setErrors(`error ${error.response.status}`)
+      })
+      .finally(() => setLoading(false))
+  }
+
   return {
     vehicle: { data, setData, errors, loading },
     createVehicle,
     updateVehicle,
+    destroyVehicle,
   }
 }

@@ -24,5 +24,5 @@ export function useVehicles(){
       .finally(() => setLoading(false))
   }
 
-  return { vehicles, loading }
+  return { vehicles, loading, getVehicles }
 }
