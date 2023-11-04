@@ -22,6 +22,7 @@ function App() {
     return <>
       <NamedLink name="parkings.active">Parkings</NamedLink>
       <NamedLink name="vehicles.index">Vehicles</NamedLink>
+      <NamedLink name="parkings.history">History</NamedLink>
     </>
   }
 
