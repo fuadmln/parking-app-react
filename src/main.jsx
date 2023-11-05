@@ -14,6 +14,7 @@ import EditVehicle from '@/views/vehicles/EditVehicle'
 import ActiveParkings from '@/views/parkings/ActiveParkings'
 import OrderParkings from '@/views/parkings/OrderParkings'
 import ParkingHistory from '@/views/parkings/ParkingHistory'
+import ParkingDetails from '@/views/parkings/ParkingDetails'
 import '@/assets/main.css'
 import { route } from '@/routes'
 
@@ -39,6 +40,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
           <Route path={ route('parkings.active') } element={<ActiveParkings />} />
           <Route path={ route('parkings.create') } element={<OrderParkings />} />
           <Route path={ route('parkings.history') } element={<ParkingHistory />} />
+          <Route path={ route('parkings.show') } element={<ParkingDetails />} />
         </Route>
       </Routes>
     </BrowserRouter>
